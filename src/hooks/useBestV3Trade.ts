@@ -1,3 +1,4 @@
+import { ONE_BIPS } from './../constants/index'
 import { Token, Currency, CurrencyAmount, TokenAmount, TradeType } from '@uniswap/sdk-core'
 import { encodeRouteToPath, Route, Trade } from '@uniswap/v3-sdk'
 import { BigNumber } from 'ethers'
@@ -5,6 +6,9 @@ import { useMemo } from 'react'
 import { useSingleContractMultipleData } from '../state/multicall/hooks'
 import { useAllV3Routes } from './useAllV3Routes'
 import { useV3Quoter } from './useContract'
+import { Percent } from '@uniswap/sdk-core'
+import JSBI from 'jsbi'
+import { BETTER_TRADE_LESS_HOPS_THRESHOLD, ONE_HUNDRED_PERCENT } from '../constants/index'
 
 export enum V3TradeState {
   LOADING,
@@ -59,13 +63,23 @@ export function useBestV3TradeExactIn(
             bestRoute: routes[i],
             amountOut: result.amountOut,
           }
-        } else if (currentBest.amountOut.lt(result.amountOut)) {
-          return {
-            bestRoute: routes[i],
-            amountOut: result.amountOut,
+        } else {
+          const hopsCurrentBest = currentBest.bestRoute?.tokenPath?.length
+          const hopsResult = routes[i].tokenPath.length
+          const amountRatio = new Percent(JSBI.BigInt(currentBest.amountOut), JSBI.BigInt(result.amountOut))
+          const belowThreshold = amountRatio.subtract(ONE_BIPS).lessThan(BETTER_TRADE_LESS_HOPS_THRESHOLD)
+          const resultBetterThanCurrent = currentBest.amountOut.lt(result.amountOut)
+          // result isnt better, but less hops and difference is < threshold --- if not just check if result is better
+          if (
+            (!resultBetterThanCurrent && hopsCurrentBest && belowThreshold && hopsResult < hopsCurrentBest) ||
+            resultBetterThanCurrent
+          ) {
+            return {
+              bestRoute: routes[i],
+              amountOut: result.amountOut,
+            }
           }
         }
-
         return currentBest
       },
       {
@@ -143,10 +157,22 @@ export function useBestV3TradeExactOut(
             bestRoute: routes[i],
             amountIn: result.amountIn,
           }
-        } else if (currentBest.amountIn.gt(result.amountIn)) {
-          return {
-            bestRoute: routes[i],
-            amountIn: result.amountIn,
+        } else {
+          const hopsCurrentBest = currentBest.bestRoute?.tokenPath?.length
+          const hopsResult = routes[i].tokenPath.length
+          const amountRatio = new Percent(JSBI.BigInt(result.amountIn), JSBI.BigInt(currentBest.amountIn))
+          // calculate % difference in output amounts, see if result has lower amount in
+          const belowThreshold = ONE_HUNDRED_PERCENT.subtract(amountRatio).greaterThan(BETTER_TRADE_LESS_HOPS_THRESHOLD)
+          const resultBetterThanCurrent = currentBest.amountIn.gt(result.amountIn)
+          // result isnt better, but less hops and difference is < threshold
+          if (
+            (hopsCurrentBest && !resultBetterThanCurrent && belowThreshold && hopsResult < hopsCurrentBest) ||
+            resultBetterThanCurrent
+          ) {
+            return {
+              bestRoute: routes[i],
+              amountIn: result.amountIn,
+            }
           }
         }
 
