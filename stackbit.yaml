@@ -1,0 +1,2525 @@
+stackbitVersion: ~0.3.0
+dataDir: ''
+models:
+  tsconfig:
+    type: data
+    label: Tsconfig
+    file: cypress/tsconfig.json
+    fields:
+      - type: object
+        name: compilerOptions
+        label: Compiler Options
+        fields:
+          - type: boolean
+            name: strict
+            label: Strict
+          - type: string
+            name: baseUrl
+            label: Base Url
+          - type: string
+            name: target
+            label: Target
+          - type: list
+            name: lib
+            label: Lib
+            items:
+              type: string
+          - type: list
+            name: types
+            label: Types
+            items:
+              type: string
+      - type: list
+        name: include
+        label: Include
+        items:
+          type: string
+  locale:
+    type: data
+    label: Locale
+    folder: public/locales
+    fields:
+      - type: string
+        name: noWallet
+        label: No Wallet
+      - type: string
+        name: wrongNetwork
+        label: Wrong Network
+      - type: string
+        name: switchNetwork
+        label: Switch Network
+      - type: string
+        name: installWeb3MobileBrowser
+        label: Install Web 3 Mobile Browser
+      - type: string
+        name: installMetamask
+        label: Install Metamask
+      - type: string
+        name: disconnected
+        label: Disconnected
+      - type: string
+        name: swap
+        label: Swap
+      - type: string
+        name: swapAnyway
+        label: Swap Anyway
+      - type: string
+        name: send
+        label: Send
+      - type: string
+        name: sendAnyway
+        label: Send Anyway
+      - type: string
+        name: pool
+        label: Pool
+      - type: string
+        name: betaWarning
+        label: Beta Warning
+      - type: string
+        name: input
+        label: Input
+      - type: string
+        name: output
+        label: Output
+      - type: string
+        name: estimated
+        label: Estimated
+      - type: string
+        name: balance
+        label: Balance
+      - type: string
+        name: unlock
+        label: Unlock
+      - type: string
+        name: pending
+        label: Pending
+      - type: string
+        name: selectToken
+        label: Select Token
+      - type: string
+        name: searchOrPaste
+        label: Search Or Paste
+      - type: string
+        name: searchOrPasteMobile
+        label: Search Or Paste Mobile
+      - type: string
+        name: noExchange
+        label: No Exchange
+      - type: string
+        name: exchangeRate
+        label: Exchange Rate
+      - type: string
+        name: unknownError
+        label: Unknown Error
+      - type: string
+        name: enterValueCont
+        label: Enter Value Cont
+      - type: string
+        name: selectTokenCont
+        label: Select Token Cont
+      - type: string
+        name: noLiquidity
+        label: No Liquidity
+      - type: string
+        name: insufficientLiquidity
+        label: Insufficient Liquidity
+      - type: string
+        name: unlockTokenCont
+        label: Unlock Token Cont
+      - type: string
+        name: transactionDetails
+        label: Transaction Details
+      - type: string
+        name: hideDetails
+        label: Hide Details
+      - type: string
+        name: slippageWarning
+        label: Slippage Warning
+      - type: string
+        name: highSlippageWarning
+        label: High Slippage Warning
+      - type: string
+        name: youAreSelling
+        label: You Are Selling
+      - type: string
+        name: orTransFail
+        label: Or Trans Fail
+      - type: string
+        name: youWillReceive
+        label: You Will Receive
+      - type: string
+        name: youAreBuying
+        label: You Are Buying
+      - type: string
+        name: itWillCost
+        label: It Will Cost
+      - type: string
+        name: forAtMost
+        label: For At Most
+      - type: string
+        name: insufficientBalance
+        label: Insufficient Balance
+      - type: string
+        name: inputNotValid
+        label: Input Not Valid
+      - type: string
+        name: differentToken
+        label: Different Token
+      - type: string
+        name: noRecipient
+        label: No Recipient
+      - type: string
+        name: invalidRecipient
+        label: Invalid Recipient
+      - type: string
+        name: recipientAddress
+        label: Recipient Address
+      - type: string
+        name: youAreSending
+        label: You Are Sending
+      - type: string
+        name: willReceive
+        label: Will Receive
+      - type: string
+        name: to
+        label: To
+      - type: string
+        name: addLiquidity
+        label: Add Liquidity
+      - type: string
+        name: deposit
+        label: Deposit
+      - type: string
+        name: currentPoolSize
+        label: Current Pool Size
+      - type: string
+        name: yourPoolShare
+        label: Your Pool Share
+      - type: string
+        name: noZero
+        label: No Zero
+      - type: string
+        name: mustBeETH
+        label: Must Be ETH
+      - type: string
+        name: enterCurrencyOrLabelCont
+        label: Enter Currency Or Label Cont
+      - type: string
+        name: youAreAdding
+        label: You Are Adding
+      - type: string
+        name: and
+        label: And
+      - type: string
+        name: intoPool
+        label: Into Pool
+      - type: string
+        name: outPool
+        label: Out Pool
+      - type: string
+        name: youWillMint
+        label: You Will Mint
+      - type: string
+        name: liquidityTokens
+        label: Liquidity Tokens
+      - type: string
+        name: totalSupplyIs
+        label: Total Supply Is
+      - type: string
+        name: youAreSettingExRate
+        label: You Are Setting Ex Rate
+      - type: string
+        name: totalSupplyIs0
+        label: Total Supply Is 0
+      - type: string
+        name: tokenWorth
+        label: Token Worth
+      - type: string
+        name: firstLiquidity
+        label: First Liquidity
+      - type: string
+        name: initialExchangeRate
+        label: Initial Exchange Rate
+      - type: string
+        name: removeLiquidity
+        label: Remove Liquidity
+      - type: string
+        name: poolTokens
+        label: Pool Tokens
+      - type: string
+        name: enterLabelCont
+        label: Enter Label Cont
+      - type: string
+        name: youAreRemoving
+        label: You Are Removing
+      - type: string
+        name: youWillRemove
+        label: You Will Remove
+      - type: string
+        name: createExchange
+        label: Create Exchange
+      - type: string
+        name: invalidTokenAddress
+        label: Invalid Token Address
+      - type: string
+        name: exchangeExists
+        label: Exchange Exists
+      - type: string
+        name: invalidSymbol
+        label: Invalid Symbol
+      - type: string
+        name: invalidDecimals
+        label: Invalid Decimals
+      - type: string
+        name: tokenAddress
+        label: Token Address
+      - type: string
+        name: label
+        label: Label
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: symbol
+        label: Symbol
+      - type: string
+        name: decimals
+        label: Decimals
+      - type: string
+        name: enterTokenCont
+        label: Enter Token Cont
+      - type: string
+        name: priceChange
+        label: Price Change
+      - type: string
+        name: forAtLeast
+        label: For At Least
+      - type: string
+        name: noToken
+        label: No Token
+      - type: string
+        name: brokenToken
+        label: Broken Token
+      - type: string
+        name: toleranceExplanation
+        label: Tolerance Explanation
+      - type: string
+        name: tokenSearchPlaceholder
+        label: Token Search Placeholder
+      - type: string
+        name: selectFee
+        label: Select Fee
+      - type: string
+        name: selectLiquidityRange
+        label: Select Liquidity Range
+      - type: string
+        name: selectPool
+        label: Select Pool
+      - type: string
+        name: depositAmounts
+        label: Deposit Amounts
+      - type: string
+        name: fee
+        label: Fee
+      - type: string
+        name: setLimits
+        label: Set Limits
+      - type: string
+        name: percent
+        label: Percent
+      - type: string
+        name: rate
+        label: Rate
+      - type: string
+        name: currentRate
+        label: Current Rate
+      - type: string
+        name: inactiveRangeWarning
+        label: Inactive Range Warning
+      - type: string
+        name: invalidRangeWarning
+        label: Invalid Range Warning
+      - type: string
+        name: connectWallet
+        label: Connect Wallet
+      - type: string
+        name: unsupportedAsset
+        label: Unsupported Asset
+      - type: string
+        name: feePool
+        label: Fee Pool
+      - type: string
+        name: feeTier
+        label: Fee Tier
+      - type: string
+        name: rebalanceMessage
+        label: Rebalance Message
+      - type: string
+        name: addEarnHelper
+        label: Add Earn Helper
+      - type: string
+        name: learnMoreAboutFess
+        label: Learn More About Fess
+      - type: string
+        name: selectAPool
+        label: Select A Pool
+      - type: string
+        name: poolType
+        label: Pool Type
+      - type: string
+        name: rangeWarning
+        label: Range Warning
+      - type: string
+        name: chooseLiquidityAmount
+        label: Choose Liquidity Amount
+      - type: string
+        name: inputTokenDynamic
+        label: Input Token Dynamic
+      - type: string
+        name: selectStartingPrice
+        label: Select Starting Price
+      - type: string
+        name: newPoolPrice
+        label: New Pool Price
+      - type: string
+        name: invertedRate
+        label: Inverted Rate
+  locale_1:
+    type: data
+    label: Locale 1
+    folder: public/locales
+    fields:
+      - type: string
+        name: noWallet
+        label: No Wallet
+      - type: string
+        name: wrongNetwork
+        label: Wrong Network
+      - type: string
+        name: switchNetwork
+        label: Switch Network
+      - type: string
+        name: installWeb3MobileBrowser
+        label: Install Web 3 Mobile Browser
+      - type: string
+        name: installMetamask
+        label: Install Metamask
+      - type: string
+        name: disconnected
+        label: Disconnected
+      - type: string
+        name: swap
+        label: Swap
+      - type: string
+        name: send
+        label: Send
+      - type: string
+        name: pool
+        label: Pool
+      - type: string
+        name: betaWarning
+        label: Beta Warning
+      - type: string
+        name: input
+        label: Input
+      - type: string
+        name: output
+        label: Output
+      - type: string
+        name: estimated
+        label: Estimated
+      - type: string
+        name: balance
+        label: Balance
+      - type: string
+        name: unlock
+        label: Unlock
+      - type: string
+        name: pending
+        label: Pending
+      - type: string
+        name: selectToken
+        label: Select Token
+      - type: string
+        name: searchOrPaste
+        label: Search Or Paste
+      - type: string
+        name: noExchange
+        label: No Exchange
+      - type: string
+        name: exchangeRate
+        label: Exchange Rate
+      - type: string
+        name: enterValueCont
+        label: Enter Value Cont
+      - type: string
+        name: selectTokenCont
+        label: Select Token Cont
+      - type: string
+        name: noLiquidity
+        label: No Liquidity
+      - type: string
+        name: unlockTokenCont
+        label: Unlock Token Cont
+      - type: string
+        name: transactionDetails
+        label: Transaction Details
+      - type: string
+        name: hideDetails
+        label: Hide Details
+      - type: string
+        name: youAreSelling
+        label: You Are Selling
+      - type: string
+        name: orTransFail
+        label: Or Trans Fail
+      - type: string
+        name: youWillReceive
+        label: You Will Receive
+      - type: string
+        name: youAreBuying
+        label: You Are Buying
+      - type: string
+        name: itWillCost
+        label: It Will Cost
+      - type: string
+        name: insufficientBalance
+        label: Insufficient Balance
+      - type: string
+        name: inputNotValid
+        label: Input Not Valid
+      - type: string
+        name: differentToken
+        label: Different Token
+      - type: string
+        name: noRecipient
+        label: No Recipient
+      - type: string
+        name: invalidRecipient
+        label: Invalid Recipient
+      - type: string
+        name: recipientAddress
+        label: Recipient Address
+      - type: string
+        name: youAreSending
+        label: You Are Sending
+      - type: string
+        name: willReceive
+        label: Will Receive
+      - type: string
+        name: to
+        label: To
+      - type: string
+        name: addLiquidity
+        label: Add Liquidity
+      - type: string
+        name: deposit
+        label: Deposit
+      - type: string
+        name: currentPoolSize
+        label: Current Pool Size
+      - type: string
+        name: yourPoolShare
+        label: Your Pool Share
+      - type: string
+        name: noZero
+        label: No Zero
+      - type: string
+        name: mustBeETH
+        label: Must Be ETH
+      - type: string
+        name: enterCurrencyOrLabelCont
+        label: Enter Currency Or Label Cont
+      - type: string
+        name: youAreAdding
+        label: You Are Adding
+      - type: string
+        name: and
+        label: And
+      - type: string
+        name: intoPool
+        label: Into Pool
+      - type: string
+        name: outPool
+        label: Out Pool
+      - type: string
+        name: youWillMint
+        label: You Will Mint
+      - type: string
+        name: liquidityTokens
+        label: Liquidity Tokens
+      - type: string
+        name: totalSupplyIs
+        label: Total Supply Is
+      - type: string
+        name: youAreSettingExRate
+        label: You Are Setting Ex Rate
+      - type: string
+        name: totalSupplyIs0
+        label: Total Supply Is 0
+      - type: string
+        name: tokenWorth
+        label: Token Worth
+      - type: string
+        name: firstLiquidity
+        label: First Liquidity
+      - type: string
+        name: initialExchangeRate
+        label: Initial Exchange Rate
+      - type: string
+        name: removeLiquidity
+        label: Remove Liquidity
+      - type: string
+        name: poolTokens
+        label: Pool Tokens
+      - type: string
+        name: enterLabelCont
+        label: Enter Label Cont
+      - type: string
+        name: youAreRemoving
+        label: You Are Removing
+      - type: string
+        name: youWillRemove
+        label: You Will Remove
+      - type: string
+        name: createExchange
+        label: Create Exchange
+      - type: string
+        name: invalidTokenAddress
+        label: Invalid Token Address
+      - type: string
+        name: exchangeExists
+        label: Exchange Exists
+      - type: string
+        name: invalidSymbol
+        label: Invalid Symbol
+      - type: string
+        name: invalidDecimals
+        label: Invalid Decimals
+      - type: string
+        name: tokenAddress
+        label: Token Address
+      - type: string
+        name: label
+        label: Label
+      - type: string
+        name: decimals
+        label: Decimals
+      - type: string
+        name: enterTokenCont
+        label: Enter Token Cont
+  manifest:
+    type: data
+    label: Manifest
+    file: public/manifest.json
+    fields:
+      - type: string
+        name: background_color
+        label: Background Color
+      - type: string
+        name: display
+        label: Display
+      - type: string
+        name: homepage_url
+        label: Homepage Url
+      - type: list
+        name: icons
+        label: Icons
+        items:
+          type: object
+          fields:
+            - type: image
+              name: src
+              label: Src
+            - type: string
+              name: sizes
+              label: Sizes
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: purpose
+              label: Purpose
+      - type: string
+        name: orientation
+        label: Orientation
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: short_name
+        label: Short Name
+      - type: string
+        name: start_url
+        label: Start Url
+      - type: string
+        name: theme_color
+        label: Theme Color
+  argent_wallet_detector:
+    type: data
+    label: Argent Wallet Detector
+    file: src/abis/argent-wallet-detector.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_8qlqgrvvpt
+        - object_fu1ccnl3by
+  eip_2612:
+    type: data
+    label: Eip 2612
+    file: src/abis/eip_2612.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: boolean
+          name: constant
+          label: Constant
+        - type: list
+          name: inputs
+          label: Inputs
+          items:
+            type: model
+            models:
+              - object_tci1q1iloy
+              - object_5lbaz2s8ty
+        - type: string
+          name: name
+          label: Name
+        - type: list
+          name: outputs
+          label: Outputs
+          items:
+            type: object
+            fields:
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: type
+                label: Type
+        - type: boolean
+          name: payable
+          label: Payable
+        - type: string
+          name: stateMutability
+          label: State Mutability
+        - type: string
+          name: type
+          label: Type
+  ens_public_resolver:
+    type: data
+    label: Ens Public Resolver
+    file: src/abis/ens-public-resolver.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_q6jtvujme3
+        - object_5zqipul79k
+  ens_registrar:
+    type: data
+    label: Ens Registrar
+    file: src/abis/ens-registrar.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_uooabcy6x2
+        - object_4g3gznl6fl
+  erc_20:
+    type: data
+    label: Erc 20
+    file: src/abis/erc20.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_9x3fyvf433
+        - object_hnvamay895
+  erc_20_bytes_32:
+    type: data
+    label: Erc 20 Bytes 32
+    file: src/abis/erc20_bytes32.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: boolean
+          name: constant
+          label: Constant
+        - type: string
+          name: name
+          label: Name
+        - type: list
+          name: outputs
+          label: Outputs
+          items:
+            type: object
+            fields:
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: type
+                label: Type
+        - type: boolean
+          name: payable
+          label: Payable
+        - type: string
+          name: stateMutability
+          label: State Mutability
+        - type: string
+          name: type
+          label: Type
+  migrator:
+    type: data
+    label: Migrator
+    file: src/abis/migrator.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: list
+          name: inputs
+          label: Inputs
+          items:
+            type: object
+            fields:
+              - type: string
+                name: internalType
+                label: Internal Type
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: type
+                label: Type
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: stateMutability
+          label: State Mutability
+        - type: string
+          name: type
+          label: Type
+  multicall:
+    type: data
+    label: Multicall
+    file: src/abis/multicall.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: list
+          name: inputs
+          label: Inputs
+          items:
+            type: model
+            models:
+              - object_62jd54ixb7
+              - object_zzq3n29nao
+              - object_yqyaejon39
+              - object_g450qq42su
+              - object_xi458xw86p
+        - type: string
+          name: name
+          label: Name
+        - type: list
+          name: outputs
+          label: Outputs
+          items:
+            type: object
+            fields:
+              - type: list
+                name: components
+                label: Components
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: internalType
+                      label: Internal Type
+                    - type: string
+                      name: name
+                      label: Name
+                    - type: string
+                      name: type
+                      label: Type
+              - type: string
+                name: internalType
+                label: Internal Type
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: type
+                label: Type
+        - type: string
+          name: stateMutability
+          label: State Mutability
+        - type: string
+          name: type
+          label: Type
+  multicall_2:
+    type: data
+    label: Multicall 2
+    file: src/abis/multicall2.json
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: list
+          name: inputs
+          label: Inputs
+          items:
+            type: model
+            models:
+              - object_9qfne9kxs1
+              - object_3snnujpyop
+              - object_ap8iu4kq75
+              - object_yng9423h8h
+              - object_wydthoqhwo
+        - type: string
+          name: name
+          label: Name
+        - type: list
+          name: outputs
+          label: Outputs
+          items:
+            type: object
+            fields:
+              - type: list
+                name: components
+                label: Components
+                items:
+                  type: object
+                  fields:
+                    - type: string
+                      name: internalType
+                      label: Internal Type
+                    - type: string
+                      name: name
+                      label: Name
+                    - type: string
+                      name: type
+                      label: Type
+              - type: string
+                name: internalType
+                label: Internal Type
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: type
+                label: Type
+        - type: string
+          name: stateMutability
+          label: State Mutability
+        - type: string
+          name: type
+          label: Type
+  unisocks:
+    type: data
+    label: Unisocks
+    file: src/abis/unisocks.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_68zmvh0tqf
+        - object_f33neuyzfm
+  weth:
+    type: data
+    label: Weth
+    file: src/abis/weth.json
+    isList: true
+    items:
+      type: model
+      models:
+        - object_lqgbcwinle
+        - object_e756bmw307
+  uniswap_v_2_unsupported_tokenlist:
+    type: data
+    label: Uniswap V 2 Unsupported Tokenlist
+    file: src/constants/tokenLists/uniswap-v2-unsupported.tokenlist.json
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: datetime
+        name: timestamp
+        label: Timestamp
+      - type: object
+        name: version
+        label: Version
+        fields:
+          - type: number
+            name: major
+            label: Major
+            subtype: int
+          - type: number
+            name: minor
+            label: Minor
+            subtype: int
+          - type: number
+            name: patch
+            label: Patch
+            subtype: int
+      - type: string
+        name: logoURI
+        label: Logo URI
+      - type: list
+        name: keywords
+        label: Keywords
+        items:
+          type: string
+      - type: list
+        name: tokens
+        label: Tokens
+        items:
+          type: object
+          fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: address
+              label: Address
+            - type: string
+              name: symbol
+              label: Symbol
+            - type: number
+              name: decimals
+              label: Decimals
+              subtype: int
+            - type: number
+              name: chainId
+              label: Chain Id
+              subtype: int
+            - type: image
+              name: logoURI
+              label: Logo URI
+  object_8m1hpv5z4g:
+    type: object
+    label: Object 1
+    fields: []
+  object_00qadalyk2:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_hfalswzk01:
+    type: object
+    label: Object 3
+    fields: []
+  object_a9za7vvs9y:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_pujmizbnoq:
+    type: object
+    label: Object 5
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ekgrye4ffs:
+    type: object
+    label: Object 6
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_7oqg3yxo8u:
+    type: object
+    label: Object 7
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_h2mwgr9dm2:
+    type: object
+    label: Object 8
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_u3uu2ax801:
+    type: object
+    label: Object 9
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_2s83ktv4ij:
+    type: object
+    label: Object 10
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_8qlqgrvvpt:
+    type: object
+    label: Object 11
+    fields:
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_hfalswzk01
+            - object_a9za7vvs9y
+            - object_7oqg3yxo8u
+            - object_2s83ktv4ij
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_8m1hpv5z4g
+            - object_00qadalyk2
+            - object_pujmizbnoq
+            - object_ekgrye4ffs
+            - object_h2mwgr9dm2
+            - object_u3uu2ax801
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_fu1ccnl3by:
+    type: object
+    label: Object 12
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_tci1q1iloy:
+    type: object
+    label: Object 13
+    fields: []
+  object_5lbaz2s8ty:
+    type: object
+    label: Object 14
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_txcu4szp4j:
+    type: object
+    label: Object 15
+    fields: []
+  object_bg6omdhvro:
+    type: object
+    label: Object 16
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_zz47srymi7:
+    type: object
+    label: Object 17
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_tgt2bvu8vg:
+    type: object
+    label: Object 18
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_1ailby8zs4:
+    type: object
+    label: Object 19
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_erdv7ey8j9:
+    type: object
+    label: Object 20
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_x01k4eabkf:
+    type: object
+    label: Object 21
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_b93adau4nu:
+    type: object
+    label: Object 22
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_x3ikeoqaho:
+    type: object
+    label: Object 23
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_e40t56cu09:
+    type: object
+    label: Object 24
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_q6jtvujme3:
+    type: object
+    label: Object 25
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_txcu4szp4j
+            - object_bg6omdhvro
+            - object_zz47srymi7
+            - object_tgt2bvu8vg
+            - object_1ailby8zs4
+            - object_erdv7ey8j9
+            - object_x01k4eabkf
+            - object_b93adau4nu
+            - object_x3ikeoqaho
+            - object_e40t56cu09
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_5zqipul79k:
+    type: object
+    label: Object 26
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_maj5ubwcbm:
+    type: object
+    label: Object 27
+    fields: []
+  object_m2h2sx5pix:
+    type: object
+    label: Object 28
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_zgx1arra88:
+    type: object
+    label: Object 29
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_17ukh6fb2g:
+    type: object
+    label: Object 30
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_u1v4q18166:
+    type: object
+    label: Object 31
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_a7ehhqks8u:
+    type: object
+    label: Object 32
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_l16p5atdx6:
+    type: object
+    label: Object 33
+    fields: []
+  object_yhlvjh6vnb:
+    type: object
+    label: Object 34
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_8bri6uiizk:
+    type: object
+    label: Object 35
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_c8t0nvt0rw:
+    type: object
+    label: Object 36
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_wo6ipia9w8:
+    type: object
+    label: Object 37
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_vslqnoop9o:
+    type: object
+    label: Object 38
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ghyqcy5p0c:
+    type: object
+    label: Object 39
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_qfpkhx5axi:
+    type: object
+    label: Object 40
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_zb5btb3yxq:
+    type: object
+    label: Object 41
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_7h0ya9kzsj:
+    type: object
+    label: Object 42
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_q2ju1xe1i5:
+    type: object
+    label: Object 43
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_zvyq8u9det:
+    type: object
+    label: Object 44
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_uooabcy6x2:
+    type: object
+    label: Object 45
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_maj5ubwcbm
+            - object_m2h2sx5pix
+            - object_zgx1arra88
+            - object_17ukh6fb2g
+            - object_u1v4q18166
+            - object_a7ehhqks8u
+            - object_8bri6uiizk
+            - object_c8t0nvt0rw
+            - object_wo6ipia9w8
+            - object_vslqnoop9o
+            - object_qfpkhx5axi
+            - object_zb5btb3yxq
+            - object_7h0ya9kzsj
+            - object_zvyq8u9det
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_l16p5atdx6
+            - object_yhlvjh6vnb
+            - object_ghyqcy5p0c
+            - object_q2ju1xe1i5
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_4g3gznl6fl:
+    type: object
+    label: Object 46
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_bgx0z9gty6:
+    type: object
+    label: Object 47
+    fields: []
+  object_pohcjp65ng:
+    type: object
+    label: Object 48
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_eb9tmn2oof:
+    type: object
+    label: Object 49
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_2y39jihegi:
+    type: object
+    label: Object 50
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ackm56kj50:
+    type: object
+    label: Object 51
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_jm3bfl0a0y:
+    type: object
+    label: Object 52
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_9x3fyvf433:
+    type: object
+    label: Object 53
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_bgx0z9gty6
+            - object_pohcjp65ng
+            - object_eb9tmn2oof
+            - object_2y39jihegi
+            - object_ackm56kj50
+            - object_jm3bfl0a0y
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_hnvamay895:
+    type: object
+    label: Object 54
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_62jd54ixb7:
+    type: object
+    label: Object 55
+    fields: []
+  object_zzq3n29nao:
+    type: object
+    label: Object 56
+    fields:
+      - type: list
+        name: components
+        label: Components
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_yqyaejon39:
+    type: object
+    label: Object 57
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_g450qq42su:
+    type: object
+    label: Object 58
+    fields:
+      - type: list
+        name: components
+        label: Components
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_xi458xw86p:
+    type: object
+    label: Object 59
+    fields:
+      - type: list
+        name: components
+        label: Components
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_9qfne9kxs1:
+    type: object
+    label: Object 60
+    fields: []
+  object_3snnujpyop:
+    type: object
+    label: Object 61
+    fields:
+      - type: list
+        name: components
+        label: Components
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_ap8iu4kq75:
+    type: object
+    label: Object 62
+    fields:
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_yng9423h8h:
+    type: object
+    label: Object 63
+    fields:
+      - type: list
+        name: components
+        label: Components
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_wydthoqhwo:
+    type: object
+    label: Object 64
+    fields:
+      - type: list
+        name: components
+        label: Components
+        items:
+          type: object
+          fields:
+            - type: string
+              name: internalType
+              label: Internal Type
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: internalType
+        label: Internal Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_5z2vhosv6z:
+    type: object
+    label: Object 65
+    fields: []
+  object_iejhq1hls6:
+    type: object
+    label: Object 66
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_hst2clefgd:
+    type: object
+    label: Object 67
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_32rlsju74f:
+    type: object
+    label: Object 68
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_z8onf3caxs:
+    type: object
+    label: Object 69
+    fields: []
+  object_4eg74b2x3h:
+    type: object
+    label: Object 70
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_hgmg6tfson:
+    type: object
+    label: Object 71
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_mx1ydsn5vb:
+    type: object
+    label: Object 72
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_xk1xoukq7f:
+    type: object
+    label: Object 73
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_f0er487uhy:
+    type: object
+    label: Object 74
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: unit
+        label: Unit
+  object_eylq5cffk9:
+    type: object
+    label: Object 75
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_o1008t85zf:
+    type: object
+    label: Object 76
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_wymhjp5ruc:
+    type: object
+    label: Object 77
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_v04ajxsokm:
+    type: object
+    label: Object 78
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_lguih39xlu:
+    type: object
+    label: Object 79
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_wb0sale0cr:
+    type: object
+    label: Object 80
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_q04ymqu2mg:
+    type: object
+    label: Object 81
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_sx39b6s6nm:
+    type: object
+    label: Object 82
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_2ekpsekriz:
+    type: object
+    label: Object 83
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_fa5sdtv6e5:
+    type: object
+    label: Object 84
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_qsz8yceytt:
+    type: object
+    label: Object 85
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_7wfmroyck4:
+    type: object
+    label: Object 86
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_1gtfqz9p6j:
+    type: object
+    label: Object 87
+    fields:
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: name
+        label: Name
+  object_68zmvh0tqf:
+    type: object
+    label: Object 88
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_5z2vhosv6z
+            - object_iejhq1hls6
+            - object_hst2clefgd
+            - object_32rlsju74f
+            - object_hgmg6tfson
+            - object_mx1ydsn5vb
+            - object_xk1xoukq7f
+            - object_f0er487uhy
+            - object_eylq5cffk9
+            - object_o1008t85zf
+            - object_v04ajxsokm
+            - object_wb0sale0cr
+            - object_sx39b6s6nm
+            - object_fa5sdtv6e5
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_z8onf3caxs
+            - object_4eg74b2x3h
+            - object_wymhjp5ruc
+            - object_lguih39xlu
+            - object_q04ymqu2mg
+            - object_2ekpsekriz
+            - object_qsz8yceytt
+            - object_7wfmroyck4
+            - object_1gtfqz9p6j
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: type
+        label: Type
+      - type: string
+        name: gas
+        label: Gas
+  object_f33neuyzfm:
+    type: object
+    label: Object 89
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: string
+              name: type
+              label: Type
+            - type: string
+              name: name
+              label: Name
+            - type: boolean
+              name: indexed
+              label: Indexed
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: string
+        name: type
+        label: Type
+  object_7o4pceeo48:
+    type: object
+    label: Object 90
+    fields: []
+  object_utelui3wuh:
+    type: object
+    label: Object 91
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_2b4tfkl6c4:
+    type: object
+    label: Object 92
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_c7cypks8ju:
+    type: object
+    label: Object 93
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_mzuqo6ecce:
+    type: object
+    label: Object 94
+    fields: []
+  object_u3zh6666a4:
+    type: object
+    label: Object 95
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_nboap12dml:
+    type: object
+    label: Object 96
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_9rl1qe63xy:
+    type: object
+    label: Object 97
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_z59nvdzhqq:
+    type: object
+    label: Object 98
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_hngvtgoi3f:
+    type: object
+    label: Object 99
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_qbfh2ik0bg:
+    type: object
+    label: Object 100
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_mrj86azi74:
+    type: object
+    label: Object 101
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_a0ve6adl1h:
+    type: object
+    label: Object 102
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_airs8bad7m:
+    type: object
+    label: Object 103
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
+  object_lqgbcwinle:
+    type: object
+    label: Object 104
+    fields:
+      - type: boolean
+        name: constant
+        label: Constant
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: model
+          models:
+            - object_7o4pceeo48
+            - object_utelui3wuh
+            - object_2b4tfkl6c4
+            - object_c7cypks8ju
+            - object_9rl1qe63xy
+            - object_qbfh2ik0bg
+            - object_a0ve6adl1h
+      - type: string
+        name: name
+        label: Name
+      - type: list
+        name: outputs
+        label: Outputs
+        items:
+          type: model
+          models:
+            - object_mzuqo6ecce
+            - object_u3zh6666a4
+            - object_nboap12dml
+            - object_z59nvdzhqq
+            - object_hngvtgoi3f
+            - object_mrj86azi74
+            - object_airs8bad7m
+      - type: boolean
+        name: payable
+        label: Payable
+      - type: string
+        name: stateMutability
+        label: State Mutability
+      - type: string
+        name: type
+        label: Type
+  object_e756bmw307:
+    type: object
+    label: Object 105
+    fields:
+      - type: boolean
+        name: anonymous
+        label: Anonymous
+      - type: list
+        name: inputs
+        label: Inputs
+        items:
+          type: object
+          fields:
+            - type: boolean
+              name: indexed
+              label: Indexed
+            - type: string
+              name: name
+              label: Name
+            - type: string
+              name: type
+              label: Type
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: type
+        label: Type
